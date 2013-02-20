@@ -9,13 +9,11 @@ unsigned long long int fun(unsigned long long int n)
 int main()
 {
 	int n,d;
-	unsigned long long int ans;
 	scanf("%d",&n);
 	while(n--)
 	{
 		scanf("%d",&d);
-		ans=fun(d);
-		printf("%lld\n",ans);
+		printf("%lld\n",fun(d));
 	}
 	return 0;
 }
