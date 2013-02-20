@@ -1,0 +1,6 @@
+main(){exit(!puts("Success"));}
+
+
+
+
+
