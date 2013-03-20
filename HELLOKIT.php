@@ -1,8 +1,8 @@
 <?php
-function str_shift($str, $len)
+function str_shift($str)
 {
 $len = $len % strlen($str);
-return substr($str, $len) . substr($str, 0, $len);
+return substr($str,1) . substr($str, 0, 1);
 }
 while(1)
 {
@@ -14,7 +14,7 @@ $t=$t.$str;
 echo $t."\n";
 for($i=0;$i<strlen($str)-1;$i++)
 {
-$t=str_shift($t,1);
+$t=str_shift($t);
 echo $t."\n";
 }
 }
