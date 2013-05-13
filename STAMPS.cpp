@@ -1,19 +1,31 @@
+/* 18th best timing: 0.04secs */
 #include<iostream>
-#include<algorithm>
+#include<stdio.h>
 #include<vector>
+#include<algorithm>
 using namespace std;
-int main()
+inline int fast_int()
 {
-  vector<int> a;
+int n=0;
+int ch=getchar_unlocked();
+while(ch<48)ch=getchar_unlocked();
+while(ch >47)
+n=(n<<3)+(n<<1)+ch-'0',ch=getchar_unlocked();
+return n;
+}
+/* CODER: prassi */
+/* B.Tech,IT.,SASTRA University,Tanjore. */
+int main(){
+	vector<int> a;
 	int n,f,need,tmp,cnt,i,tot;
-	cin>>n;
+	n=fast_int();
 	for(int j=0;j<n;j++)
 	{
-		cin>>need;
-		cin>>f;
+		need=fast_int();
+		f=fast_int();
 		for(i=0;i<f;i++)
 		{
-			cin>>tmp;
+			tmp=fast_int();
 			a.push_back(tmp);
 		}
 		sort(a.begin(),a.end());
@@ -26,9 +38,10 @@ int main()
 			cnt++;
 		}
 		if(tot<need)
-		cout<<"Scenario #"<<j+1<<":\n"<<"impossible"<<endl;
+		printf("Scenario #%d:\nimpossible\n",j+1);
 		else
-		cout<<"Scenario #"<<j+1<<":\n"<<cnt<<endl;
+		printf("Scenario #%d:\n%d\n",j+1,cnt);
 		a.clear();
 	}
-}
+return 0;}
+
