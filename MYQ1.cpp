@@ -1,3 +1,4 @@
+/* Running time: 0.23secs 5th best timming --->http://www.spoj.com/ranks/MYQ1/<--- */
 #include<iostream>
 #include<algorithm>
 #include<vector>
