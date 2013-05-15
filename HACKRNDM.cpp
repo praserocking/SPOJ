@@ -1,3 +1,4 @@
+/* Run time: 0.19secs --- 24th best solution --- */
 #define loop(n,i) for(i=0;i<n;i++)
 #include<algorithm>
 #define put printf
