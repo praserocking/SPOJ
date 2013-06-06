@@ -1,5 +1,5 @@
 import math
-import sys
-for _ in range(int(sys.stdin.readline())):
-  	print(math.factorial(int(sys.stdin.readline())))
-#my first python submission!!
+n=input()
+while n > 0:
+  print math.factorial(input())
+	n-=1
