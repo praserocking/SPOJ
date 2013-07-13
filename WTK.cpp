@@ -41,7 +41,7 @@ int main(){
         int n=fast_int();
         int x;
         while(n--){
-                get("%d",&x);
+                x=fast_int();
                 put("%lld\n",f(x,0));
         }
 return 0;}
