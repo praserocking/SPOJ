@@ -1,11 +1,15 @@
-import math
-u,f=math.fabs,input
+f=input
 for x in f()*[0]:
- m=f();p,q,r,d=0,0,0,0;i=raw_input().split(' ',m)
- for n in i:
-  e=long(n);d+=1
-  if d&1 and e>0:p+=e
-  elif e<0:q+=e
- if u(p)>=u(q):print'Some Mirrors Lie!'
- else:print'Every Girl Lies!'
-
+ c,p,q,n=0,0,0,f()
+ n=raw_input().split(' ',n)
+ for t in n:
+  t=long(t)
+  if c>0:
+   c=0
+   p+=t*(t>0)
+  else:
+   c=1
+   q+=t*(t<0)
+ if q<0:q*=-1
+ if p<q:print'Every Girl Lies!'
+ else:print'Some Mirrors Lie!'
