@@ -4,12 +4,7 @@ for x in f()*[0]:
  n=raw_input().split(' ',n)
  for t in n:
   t=long(t)
-  if c>0:
-   c=0
-   p+=t*(t>0)
-  else:
-   c=1
-   q+=t*(t<0)
- if q<0:q*=-1
+  if c>0:c,p=0,p+t*(t>0)
+  else:c,q=1,q+t*-1*(t<0)
  if p<q:print'Every Girl Lies!'
  else:print'Some Mirrors Lie!'
