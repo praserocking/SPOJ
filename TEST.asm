@@ -37,18 +37,18 @@ two_digits:
 	je exit
  
 print:
-	mov	eax,4		;system call number (sys_write)
-	mov	ebx,1		;file descriptor (stdout)
-	mov ecx, esp	;message to write
-	lea	edx, [ebp+1]	;message length
-	int	0x80	;call kernel
+	mov	eax,4	
+	mov	ebx,1
+	mov ecx, esp
+	lea	edx, [ebp+1]
+	int	0x80
 	xor ebp,ebp
 	jmp read_byte
  
 exit:
-	mov	eax, 1		; sys_exit()
-	xor	ebx,ebx		; exit code 0
-	int	0x80     	; syscall
+	mov	eax, 1	
+	xor	ebx,ebx	
+	int	0x80     
 	int 3
 	
 atoi:
