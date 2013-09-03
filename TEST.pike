@@ -1,8 +1,9 @@
 int main() {
-    while(true) {
-      int a = (int)(Stdio.stdin.gets());
+    while(true){
+      int a = (int)(stdio.stdin.gets());
       if(a!=42)
-      write(sprintf("%d\n",a);
+      sprintf("%d\n",a);
+      else break;
     }
     return 0;
 }
