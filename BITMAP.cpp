@@ -40,13 +40,9 @@ int main(){
 	get("%d",&t);
 	while(t--){
 		get("%d %d",&r,&c);
-		loop(r,i){
-			get("%s",pixel[i]);	
-		}
+		loop(r,i)get("%s",pixel[i]);
 		loop(r,i)loop(c,j)ans[i][j]=pixel[i][j]=='0'?INT_MAX:0;
-		loop(r,i)loop(c,j)if(pixel[i][j]=='1'){
-			bfs(mp(i,j));
-		}
+		loop(r,i)loop(c,j)if(pixel[i][j]=='1')bfs(mp(i,j));
 		loop(r,i){
 			loop(c,j)put("%d ",ans[i][j]);put("\n");
 		}
