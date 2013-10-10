@@ -15,9 +15,6 @@ typedef pair<int,int> PII;
 int ans[200][200],t,r,c;
 char pixel[200][200];
 queue<PII>q;
-bool fine(int i,int j){
-	return ((i<r&&i>=0)&&(j<c&&j>=0))?true:false;
-}
 void bfs(PII strt){
 	PII tmp;int k,l,d;
 	q.push(strt);
@@ -26,7 +23,7 @@ void bfs(PII strt){
 		q.pop();
 		for(k=tmp.first-1;k<=tmp.first+1;k++)
 		for(l=tmp.second-1;l<=tmp.second+1;l++){
-			if(fine(k,l)){
+			if((k<r&&k>=0)&&(l<c&&l>=0)){
 				d=abs(k-strt.first)+abs(l-strt.second);
 				if(ans[k][l]>d){
 					ans[k][l]=d;
